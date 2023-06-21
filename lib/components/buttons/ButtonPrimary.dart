@@ -31,7 +31,7 @@ class ButtonPrimary extends StatefulWidget {
     this.borderColor = Colors.transparent,
     required this.onTap,
     this.isLoading = false,
-    this.textColor = ConstantsUI.WHITE,
+    this.textColor = ConstantsUI.PRIMARY_TEXT_COLOR,
     this.shadowColor = ConstantsUI.PRIMARY_SHADOW,
     this.fontSize = 16,
     this.borderRadius = 16,
@@ -75,10 +75,7 @@ class _ButtonPrimaryState extends State<ButtonPrimary> {
             padding: EdgeInsets.symmetric(vertical: 9, horizontal: 10),
             child: Center(
               child: widget.isLoading
-                  // ? Loading(
-                  //     color: Colors.white,
-                  //   )
-                  ? Container(
+                  ? Loading(
                       color: Colors.white,
                     )
                   : Row(
