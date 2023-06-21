@@ -33,9 +33,6 @@ class MyApp extends StatelessWidget {
         initialRoute: '/SplashPageView',
         routes: RoutesEngine.allRoutes,
         navigatorKey: ConstantsVariablesGlobal.mainNavigatorKey,
-        supportedLocales: [
-          const Locale('it'),
-        ],
         builder: (BuildContext context, Widget? child) {
           HttpOverrides.global = MyHttpOverrides();
           return ScrollConfiguration(
