@@ -43,6 +43,79 @@ class ButtonPrimary extends StatefulWidget {
 
 class _ButtonPrimaryState extends State<ButtonPrimary> {
   Widget build(BuildContext context) {
-    return Container();
+    return GestureDetector(
+      onTap: !widget.isLoading
+          ? () {
+              if (widget.isButtonEnabled == true) {
+                widget.onTap();
+                setState(() {});
+              }
+            }
+          : () {},
+      child: Opacity(
+        opacity: widget.isButtonEnabled ? 1 : 0.5,
+        child: Container(
+          width: widget.width,
+          height: widget.height,
+          decoration: BoxDecoration(
+            color: widget.backgroundColor,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: widget.borderColor),
+            boxShadow: widget.shadowDisabled
+                ? []
+                : [
+                    BoxShadow(
+                      color: widget.shadowColor,
+                      blurRadius: 9,
+                      offset: const Offset(0, 3),
+                    )
+                  ],
+          ),
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 9, horizontal: 10),
+            child: Center(
+              child: widget.isLoading
+                  // ? Loading(
+                  //     color: Colors.white,
+                  //   )
+                  ? Container(
+                      color: Colors.white,
+                    )
+                  : Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        widget.showIcon
+                            ? Padding(
+                                padding: EdgeInsets.only(right: 10),
+                                child: Icon(
+                                  widget.icon,
+                                  color: widget.textColor,
+                                  size: 21.0,
+                                ),
+                              )
+                            : Container(),
+                        Container(
+                          child: DefaultTextStyle(
+                            child: Text(
+                              widget.title,
+                              textAlign: TextAlign.center,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            style: TextStyle(
+                              fontFamily: ConstantsUI.PRIMARY_FONT_NAME,
+                              fontWeight: FontWeight.w600,
+                              fontSize: widget.fontSize,
+                              color: widget.textColor,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
