@@ -1,16 +1,20 @@
-# startproject
+# Template Flutter APP
 
-A new Flutter project.
+Questo progetto github è di default per la creazione di qualsiasi app utilizzando Flutter.
 
-## Getting Started
+Versione di flutter: 3.10.4
 
-This project is a starting point for a Flutter application.
+# Plugin
 
-A few resources to get you started if this is your first Flutter project:
+shared_preferences: ^2.1.2
+flutter_svg: ^2.0.7
+cached_network_image: ^3.2.3
+url_launcher: ^6.1.11
+http: ^0.13.6
+stacked: ^3.4.0
+flutter_native_splash: ^2.3.1
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Fonts
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Pulp Display
+San Francisco PRO
