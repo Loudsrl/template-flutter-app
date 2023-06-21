@@ -12,9 +12,9 @@ cached_network_image: ^3.2.3\
 url_launcher: ^6.1.11\
 http: ^0.13.6\
 stacked: ^3.4.0\
-flutter_native_splash: ^2.3.1\
+flutter_native_splash: ^2.3.1
 
 # Fonts
 
-Pulp Display
+Pulp Display\
 San Francisco PRO
