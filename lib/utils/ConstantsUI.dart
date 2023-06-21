@@ -22,8 +22,8 @@ class ConstantsUI {
   static const Color SECONDARY_BACKGROUND = Color.fromRGBO(243, 248, 252, 1);
 
   // FONTS NAME
-  static const String PRIMARY_FONT_NAME = 'LexendDeca';
-  static const String SECONDARY_FONT_NAME = 'LexendDeca';
+  static const String PRIMARY_FONT_NAME = 'PulpDisplay';
+  static const String SECONDARY_FONT_NAME = 'SanFranciscoPro';
 
   // INPUT
   static const OutlineInputBorder ENABLED_BORDER = OutlineInputBorder(

@@ -41,6 +41,7 @@ dependencies:
   url_launcher: ^6.1.11
   http: ^0.13.6
   stacked: ^3.4.0
+  flutter_native_splash: ^2.3.1
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +64,57 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/icons/
+    - assets/images/
+    
+  fonts:
+    - family: SanFranciscoPro
+      fonts:
+        - asset: assets/fonts/SF-Pro.ttf
+    - family: PulpDisplay
+      fonts:
+        - asset: assets/fonts/PulpDisplay-ExtraLightItalic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/PulpDisplay-ExtraLight.ttf
+          weight: 100
+        - asset: assets/fonts/PulpDisplay-LightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/PulpDisplay-Light.ttf
+          weight: 200
+        - asset: assets/fonts/PulpDisplay-RegularItalic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/PulpDisplay-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/PulpDisplay-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/PulpDisplay-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/PulpDisplay-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/PulpDisplay-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/PulpDisplay-OutlineItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/PulpDisplay-Outline.ttf
+          weight: 700
+        - asset: assets/fonts/PulpDisplay-BoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/PulpDisplay-Bold.ttf
+          weight: 800
+        - asset: assets/fonts/PulpDisplay-ExtraBoldItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/PulpDisplay-ExtraBold.ttf
+          weight: 900
 
   # To add assets to your application, add an assets section, like this:
   # assets:
