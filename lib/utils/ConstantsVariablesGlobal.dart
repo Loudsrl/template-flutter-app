@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class ConstantsVariablesGlobal {
   static bool DEBUG_MODE = true;
   static String ENV_API = 'production';
@@ -13,4 +15,8 @@ class ConstantsVariablesGlobal {
   //VARIABILI DEGLI STORE
   static String ID_GOOGLE_PLAY_STORE = '';
   static String ID_APP_STORE = '';
+
+  // VARIABILI PER LA GESTIONE DELLA NAVIGAZIONE DELLA NAVBAR
+  static GlobalKey<NavigatorState> mainNavigatorKey =
+      GlobalKey<NavigatorState>();
 }

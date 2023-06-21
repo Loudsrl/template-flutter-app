@@ -30,7 +30,7 @@ class SplashPageView extends StatelessWidget {
                     children: [
                       Padding(
                         padding: EdgeInsets.only(bottom: 10),
-                        child: Text('Caricamento'),
+                        child: Text('Splash page'),
                       ),
                     ],
                   ),
