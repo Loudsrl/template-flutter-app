@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:startproject/utils/ConstantsUI.dart';
@@ -8,6 +9,10 @@ import 'package:startproject/utils/ConstantsVariablesGlobal.dart';
 import 'engine/RoutesEngine.dart';
 
 void main() {
+  if (!ConstantsVariablesGlobal.DEBUG_MODE) {
+    CachedNetworkImage.logLevel = CacheManagerLogLevel.none;
+    debugPrint = (String? message, {int? wrapWidth}) => null;
+  }
   runApp(const MyApp());
 }
 
