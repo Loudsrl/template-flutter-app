@@ -9,6 +9,9 @@ class ConstantsUI {
   static const Color PRIMARY_TEXT_COLOR = Color.fromRGBO(0, 105, 180, 1);
   static const Color SECONDARY_TEXT_COLOR = Color.fromRGBO(241, 136, 0, 1);
 
+  static const Color BLACK = Color.fromRGBO(0, 0, 0, 1);
+  static const Color BLACK50 = Color.fromRGBO(0, 0, 0, 0.5);
+
   static const Color WHITE = Color.fromRGBO(255, 255, 255, 1);
   static const Color PRIMARY_SHADOW = Color.fromRGBO(15, 46, 77, 0.2);
   static const Color SECONDARY_SHADOW = Color.fromRGBO(89, 43, 9, 1);

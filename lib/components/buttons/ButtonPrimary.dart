@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/ConstantsUI.dart';
+import '../loading/Loading.dart';
 
 class ButtonPrimary extends StatefulWidget {
   final String title;
@@ -76,7 +77,11 @@ class _ButtonPrimaryState extends State<ButtonPrimary> {
             child: Center(
               child: widget.isLoading
                   ? Loading(
-                      color: Colors.white,
+                      textColor: Colors.white,
+                      align: MainAxisAlignment.center,
+                      loadingColor: ConstantsUI.PRIMARY_COLOR,
+                      text: '',
+                      loadingSize: 1,
                     )
                   : Row(
                       mainAxisAlignment: MainAxisAlignment.center,
