@@ -1,5 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, constant_identifier_names
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class ConstantsVariablesGlobal {
@@ -19,6 +21,10 @@ class ConstantsVariablesGlobal {
   static String ID_APP_STORE = '';
 
   // VARIABILI PER LA GESTIONE DELLA NAVIGAZIONE DELLA NAVBAR
+  static String currentNavigatorPage = '/HomePageView';
   static GlobalKey<NavigatorState> mainNavigatorKey =
       GlobalKey<NavigatorState>();
+  static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+  static StreamController<String> streamBottomNavigationBar =
+      StreamController<String>();
 }

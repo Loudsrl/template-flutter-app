@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 class CardPrimary extends StatefulWidget {
   final double cardHeight;
   final double cardWidth;
-  final BorderRadius borderRadius;
+  final BorderRadiusGeometry borderRadius;
   final List<BoxShadow> listShadow;
   final Widget contentWidget;
   final Color backgroundColor;
-  final BoxBorder boxBorder;
+  final BoxBorder? boxBorder;
+  final VoidCallback? onTap;
 
   const CardPrimary({
     Key? key,
@@ -17,26 +18,32 @@ class CardPrimary extends StatefulWidget {
     required this.borderRadius,
     required this.listShadow,
     required this.backgroundColor,
-    required this.boxBorder,
+    this.boxBorder,
+    this.onTap,
   }) : super(key: key);
-  @override
-  // ignore: library_private_types_in_public_api
-  _CardPrimaryState createState() => _CardPrimaryState();
+  _CardPrimaryState createState() => new _CardPrimaryState();
 }
 
 class _CardPrimaryState extends State<CardPrimary> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: widget.cardHeight,
-      width: widget.cardWidth,
-      decoration: BoxDecoration(
-        borderRadius: widget.borderRadius,
-        boxShadow: widget.listShadow,
-        color: widget.backgroundColor,
-        border: widget.boxBorder,
+    return GestureDetector(
+      onTap: widget.onTap == null
+          ? () {}
+          : () {
+              widget.onTap!();
+            },
+      child: Container(
+        height: widget.cardHeight,
+        width: widget.cardWidth,
+        decoration: BoxDecoration(
+          borderRadius: widget.borderRadius,
+          boxShadow: widget.listShadow,
+          color: widget.backgroundColor,
+          border: widget.boxBorder,
+        ),
+        child: widget.contentWidget,
       ),
-      child: widget.contentWidget,
     );
   }
 }

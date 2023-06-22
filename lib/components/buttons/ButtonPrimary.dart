@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../utils/ConstantsUI.dart';
 import '../loading/Loading.dart';
 
-// ignore: must_be_immutable
 class ButtonPrimary extends StatefulWidget {
   final String title;
   final double width;
@@ -77,10 +76,10 @@ class _ButtonPrimaryState extends State<ButtonPrimary> {
                   ],
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 9, horizontal: 10),
+            padding: EdgeInsets.symmetric(vertical: 9, horizontal: 10),
             child: Center(
               child: widget.isLoading
-                  ? const Loading(
+                  ? Loading(
                       textColor: Colors.white,
                       align: MainAxisAlignment.center,
                       loadingColor: ConstantsUI.PRIMARY_COLOR,
@@ -92,7 +91,7 @@ class _ButtonPrimaryState extends State<ButtonPrimary> {
                       children: [
                         widget.showIcon
                             ? Padding(
-                                padding: const EdgeInsets.only(right: 10),
+                                padding: EdgeInsets.only(right: 10),
                                 child: Icon(
                                   widget.icon,
                                   color: widget.textColor,
@@ -100,18 +99,20 @@ class _ButtonPrimaryState extends State<ButtonPrimary> {
                                 ),
                               )
                             : Container(),
-                        DefaultTextStyle(
-                          style: TextStyle(
-                            fontFamily: ConstantsUI.PRIMARY_FONT_NAME,
-                            fontWeight: FontWeight.w600,
-                            fontSize: widget.fontSize,
-                            color: widget.textColor,
-                          ),
-                          child: Text(
-                            widget.title,
-                            textAlign: TextAlign.center,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
+                        Container(
+                          child: DefaultTextStyle(
+                            child: Text(
+                              widget.title,
+                              textAlign: TextAlign.center,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            style: TextStyle(
+                              fontFamily: ConstantsUI.PRIMARY_FONT_NAME,
+                              fontWeight: FontWeight.w600,
+                              fontSize: widget.fontSize,
+                              color: widget.textColor,
+                            ),
                           ),
                         )
                       ],
