@@ -4,6 +4,6 @@ import '../pages/SplashPage/SplashPage.dart';
 
 class RoutesEngine {
   static var allRoutes = <String, WidgetBuilder>{
-    '/SplashPageView': (context) => SplashPageView(),
+    '/SplashPageView': (context) => const SplashPageView(),
   };
 }

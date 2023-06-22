@@ -19,10 +19,13 @@ class CardSecondary extends StatefulWidget {
     required this.backgroundColor,
     required this.boxBorder,
   }) : super(key: key);
-  _CardSecondaryState createState() => new _CardSecondaryState();
+  @override
+  // ignore: library_private_types_in_public_api
+  _CardSecondaryState createState() => _CardSecondaryState();
 }
 
 class _CardSecondaryState extends State<CardSecondary> {
+  @override
   Widget build(BuildContext context) {
     return Container(
       height: widget.cardHeight,

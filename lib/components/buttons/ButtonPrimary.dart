@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../utils/ConstantsUI.dart';
 import '../loading/Loading.dart';
 
+// ignore: must_be_immutable
 class ButtonPrimary extends StatefulWidget {
   final String title;
   final double width;
@@ -39,10 +40,13 @@ class ButtonPrimary extends StatefulWidget {
     this.isButtonEnabled = true,
     this.shadowDisabled = false,
   }) : super(key: key);
-  _ButtonPrimaryState createState() => new _ButtonPrimaryState();
+  @override
+  // ignore: library_private_types_in_public_api
+  _ButtonPrimaryState createState() => _ButtonPrimaryState();
 }
 
 class _ButtonPrimaryState extends State<ButtonPrimary> {
+  @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: !widget.isLoading
@@ -73,10 +77,10 @@ class _ButtonPrimaryState extends State<ButtonPrimary> {
                   ],
           ),
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 9, horizontal: 10),
+            padding: const EdgeInsets.symmetric(vertical: 9, horizontal: 10),
             child: Center(
               child: widget.isLoading
-                  ? Loading(
+                  ? const Loading(
                       textColor: Colors.white,
                       align: MainAxisAlignment.center,
                       loadingColor: ConstantsUI.PRIMARY_COLOR,
@@ -88,7 +92,7 @@ class _ButtonPrimaryState extends State<ButtonPrimary> {
                       children: [
                         widget.showIcon
                             ? Padding(
-                                padding: EdgeInsets.only(right: 10),
+                                padding: const EdgeInsets.only(right: 10),
                                 child: Icon(
                                   widget.icon,
                                   color: widget.textColor,
@@ -96,20 +100,18 @@ class _ButtonPrimaryState extends State<ButtonPrimary> {
                                 ),
                               )
                             : Container(),
-                        Container(
-                          child: DefaultTextStyle(
-                            child: Text(
-                              widget.title,
-                              textAlign: TextAlign.center,
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            style: TextStyle(
-                              fontFamily: ConstantsUI.PRIMARY_FONT_NAME,
-                              fontWeight: FontWeight.w600,
-                              fontSize: widget.fontSize,
-                              color: widget.textColor,
-                            ),
+                        DefaultTextStyle(
+                          style: TextStyle(
+                            fontFamily: ConstantsUI.PRIMARY_FONT_NAME,
+                            fontWeight: FontWeight.w600,
+                            fontSize: widget.fontSize,
+                            color: widget.textColor,
+                          ),
+                          child: Text(
+                            widget.title,
+                            textAlign: TextAlign.center,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         )
                       ],

@@ -10,7 +10,7 @@ class Loading extends StatefulWidget {
   final double loadingSize;
   final EdgeInsets? loadingPadding;
 
-  Loading({
+  const Loading({
     Key? key,
     this.text,
     this.textColor,
@@ -20,12 +20,14 @@ class Loading extends StatefulWidget {
     this.loadingPadding,
     this.textPadding,
   }) : super(key: key);
-  _LoadingState createState() => new _LoadingState();
+  @override
+  // ignore: library_private_types_in_public_api
+  _LoadingState createState() => _LoadingState();
 }
 
 class _LoadingState extends State<Loading> {
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: widget.loadingSize + 20,
       width: widget.loadingSize,
       child: Column(

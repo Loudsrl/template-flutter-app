@@ -1,15 +1,16 @@
+// ignore: file_names
 extension StringExtension on String {
   String capitalize() {
-    return "${this[0].toUpperCase()}${this.substring(1)}";
+    return "${this[0].toUpperCase()}${substring(1)}";
   }
 
   String convertToTitleCase() {
-    if (this.length <= 1) {
-      return this.toUpperCase();
+    if (length <= 1) {
+      return toUpperCase();
     }
 
     // Split string into multiple words
-    final List<String> words = this.split(' ');
+    final List<String> words = split(' ');
 
     // Capitalize first letter of each words
     final capitalizedWords = words.map((word) {
